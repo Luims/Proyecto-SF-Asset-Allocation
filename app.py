@@ -28,7 +28,7 @@ df2=df.copy()
 st.set_page_config(page_title="Aplicación de Portafolios", layout="wide")
 tipo_de_cambio = yf.Ticker('MXN=X')
 historial = tipo_de_cambio.history(period='1d') 
-df['CETETRC.MX'] = df['CETETRC.MX'] / historial
+df['CETETRC.MX'] = df['CETETRC.MX'] /  historial['Close'][0]
 #Rendimientos
 for emisora in emisoras:
   df[emisora + '_rend'] = np.log(df[emisora]/df[emisora].shift(252))
