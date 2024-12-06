@@ -1170,11 +1170,11 @@ elif selection == "Backtesting":
       with col1:
         fig_hist_asset = crear_histograma_distribucion(df['Rend_Portafolio'],  r[6], r[7],  f'Distribución de Retornos - {'PMV'}'  )
         st.plotly_chart(fig_hist_asset, use_container_width=True, key="hist_asset")
+        st.subheader('Rendimiento del portafolio')
+        st.write(df_desde_2020[['Rend_Portafolio']])
       with col2:
         drawdown3(df_desde_2020[['Date','Rend_Portafolio']])
-      st.subheader('Rendimiento del portafolio')
-      #st.write(df_desde_2020)
-      st.write(df_desde_2020[['Rend_Portafolio']])
+      
 
 
     elif portafolio_seleccionado == "Portafolio mínima volatilidad con objetivo de rendimiento de 10%":
@@ -1249,11 +1249,11 @@ elif selection == "Backtesting":
       with col1:
         fig_hist_asset = crear_histograma_distribucion(portafolio_estadistica2(df_desde_2020,l,['IEF_rend','CETETRC.MX_rend','SPY_rend','EZA_rend','IAU_rend']),  ll[6], ll[7],  f'Distribución de Retornos - {'PMV'}'  )
         st.plotly_chart(fig_hist_asset, use_container_width=True, key="hist_asset")
+        st.subheader('Rendimiento del portafolio')
+        st.write(df_desde_2020[['Rend_Portafolio']])
       with col2:
         drawdown3(df_desde_2020[['Date','Rend_Portafolio']])
-      st.subheader('Rendimiento del portafolio')
-      #st.write(df_desde_2020)
-      st.write(df_desde_2020[['Rend_Portafolio']])
+      
 # Black-Litterman
 elif selection == "Black-Litterman":
     st.title("Modelo Black-Litterman")
