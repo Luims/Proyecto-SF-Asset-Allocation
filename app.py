@@ -24,8 +24,11 @@ ff = '2023-12-31'
 df = yf.download(emisoras, start = fi, end = ff)['Close'].reset_index()
 df2=df.copy()
 # Configuración inicial de la app
+#Pesos a dolares
 st.set_page_config(page_title="Aplicación de Portafolios", layout="wide")
-
+tipo_de_cambio = yf.Ticker('MXN=X')
+historial = tipo_de_cambio.history(period='1d') 
+df['CETETRC.MX'] = df['CETETRC.MX'] / historial
 #Rendimientos
 for emisora in emisoras:
   df[emisora + '_rend'] = np.log(df[emisora]/df[emisora].shift(252))
