@@ -900,7 +900,7 @@ elif selection == "Estadística de Activos":
         end_date = datetime.now()
         drawdown(simbolo, start_date,end_date)  
 
-        st.write(df[['IAU','IAU_rend']])
+        #st.write(df[['IAU','IAU_rend']])
 # Portafolios^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 elif selection == "Portafolios óptimos":
     st.markdown('<div style="color:violet; font-size:40px; font-weight:bold;">Portafolios Óptimos </div>', unsafe_allow_html=True)
