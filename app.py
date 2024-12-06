@@ -409,7 +409,7 @@ def grafica_ren(df,emisora):
         df,
         x='Date',
         y=emisora,
-        title="Rendimientos de la Acción",
+        title="Rendimientos del activo",
         labels={'fecha': "Fecha", 'rendimientos': "Rendimiento"},
         template="plotly_white"
     )
@@ -660,7 +660,7 @@ elif selection == "Estadística de Activos":
         df,
         x='Date',
         y='IEF_rend',
-        title="Rendimientos de la Acción",
+        title="Rendimientos del activo",
         labels={'fecha': "Fecha", 'rendimientos': "Rendimiento"},
         template="plotly_white")
         fig.update_layout(
@@ -709,7 +709,7 @@ elif selection == "Estadística de Activos":
           df,
           x='Date',
           y='CETETRC.MX_rend',
-          title="Rendimientos de la Acción",
+          title="Rendimientos del activo",
           labels={'fecha': "Fecha", 'rendimientos': "Rendimiento"},
           template="plotly_white")
 
@@ -758,7 +758,7 @@ elif selection == "Estadística de Activos":
           df,
           x='Date',
           y='SPY_rend',
-          title="Rendimientos de la Acción",
+          title="Rendimientos del activo",
           labels={'fecha': "Fecha", 'rendimientos': "Rendimiento"},
           template="plotly_white")
 
@@ -807,7 +807,7 @@ elif selection == "Estadística de Activos":
           df,
           x='Date',
           y='EZA_rend',
-          title="Rendimientos de la Acción",
+          title="Rendimientos del activo",
           labels={'fecha': "Fecha", 'rendimientos': "Rendimiento"},
           template="plotly_white")
 
@@ -855,7 +855,7 @@ elif selection == "Estadística de Activos":
           df,
           x='Date',
           y='IAU_rend',
-          title="Rendimientos de la Acción",
+          title="Rendimientos del activo",
           labels={'fecha': "Fecha", 'rendimientos': "Rendimiento"},
           template="plotly_white")
 
