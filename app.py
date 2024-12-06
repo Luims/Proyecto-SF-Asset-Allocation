@@ -26,9 +26,9 @@ df2=df.copy()
 # Configuración inicial de la app
 #Pesos a dolares
 st.set_page_config(page_title="Aplicación de Portafolios", layout="wide")
-#tipo_de_cambio = yf.Ticker('MXN=X')
-#historial = tipo_de_cambio.history(period='1d') 
-#df['CETETRC.MX'] = df['CETETRC.MX'] /  historial['Close'][0]
+tipo_de_cambio = yf.Ticker('MXN=X')
+historial = tipo_de_cambio.history(period='1d') 
+df['CETETRC.MX'] = df['CETETRC.MX'] /  historial['Close'][0]
 #Rendimientos
 for emisora in emisoras:
   df[emisora + '_rend'] = np.log(df[emisora]/df[emisora].shift(252))
@@ -899,6 +899,8 @@ elif selection == "Estadística de Activos":
         start_date = '2010-01-01'
         end_date = datetime.now()
         drawdown(simbolo, start_date,end_date)  
+
+        st.write(df['IAU','IAU_rend'])
 # Portafolios^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 elif selection == "Portafolios óptimos":
     st.markdown('<div style="color:violet; font-size:40px; font-weight:bold;">Portafolios Óptimos </div>', unsafe_allow_html=True)
