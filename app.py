@@ -1089,12 +1089,12 @@ elif selection == "Backtesting":
       with col1:
         fig_hist_asset = crear_histograma_distribucion(portafolio_estadistica2(df_desde_2020,mv,['IEF_rend','CETETRC.MX_rend', 'SPY_rend', 'EZA_rend','IAU_rend']),  f[6], f[7],  f'Distribución de Retornos - {'PMV'}'  )
         st.plotly_chart(fig_hist_asset, use_container_width=True, key="hist_asset")
+        st.subheader('Rendimiento del portafolio')
+        st.write(df_desde_2020[['Rend_Portafolio']])
       with col2:
         drawdown3(df_desde_2020[['Date','Rend_Portafolio']])
      
-      st.subheader('Rendimiento del portafolio')
       
-      st.write(df_desde_2020[['Rend_Portafolio']])
 
     
     elif portafolio_seleccionado == "Portafolio máximo sharpe ratio":
